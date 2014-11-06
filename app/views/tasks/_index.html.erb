@@ -1,0 +1,41 @@
+<table>
+	<thead>
+		<td style="width:100px"><Strong>Store</strong></td>
+		<td><Strong>Item Description</strong></td>
+	</thead>
+
+	<% if @tasks.any? %>
+	<% @tasks.each do |task| %>
+	<% if task.archived != 1 %>
+	<tr>
+
+		<td style="width:100px; height: 50px"><%=task.title%></td>
+		<td style="width:200px"><%=task.description%></td>
+
+		<td>
+			<button class="btn btn-info archive" data-id="<%=task.id%>"> Purchased </button>
+		</td>
+
+		<% end %>
+		<% end %>
+		<% end %>
+			</tr>
+</table>
+
+<!-- 
+
+<% if @tasks.any? %>
+<% @tasks.each do |task| %>
+<div class="row">
+
+	<div class="col-sm-1"></div>
+	<div class="col-sm-3">
+		<h1><%=task.title%></h1></div>
+
+		<div class="col-sm-5">
+			<h1><%=task.description%></h1>
+		</div>
+	</div>
+</div>
+<% end %>
+<% end %> -->

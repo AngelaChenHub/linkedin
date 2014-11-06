@@ -1,0 +1,19 @@
+<h1 class="container">Biggs Chen Shopping List</h1>
+<div class="container">
+	<%= form_for @task, :remote => true, :format => :json do |f| %>
+	<div class="control-group">
+		<%= f.label :Store %>
+	<%= f.text_field :title , :class => 'form-control' %>
+		<%= f.label :Item_Description %>
+	<%= f.text_field :description, :class => 'form-control' %>
+</div>
+	</br>
+<%= f.submit 'Add Task', :class => "btn btn-success"  %>
+<% end %>
+</div>
+</br>
+<div class="container">
+	<div class="form-body">
+		<div id="tasks"></div>
+	</div>
+</div>
