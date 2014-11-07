@@ -1,7 +1,8 @@
 <table>
 	<thead>
 		<td style="width:100px"><Strong>Store</strong></td>
-		<td><Strong>Item Description</strong></td>
+		<td style="width:200px"><Strong>Item Description</strong></td>
+		<td><Strong>Added By</strong></td>
 	</thead>
 
 	<% if @tasks.any? %>
@@ -11,6 +12,7 @@
 
 		<td style="width:100px; height: 50px"><%=task.title%></td>
 		<td style="width:200px"><%=task.description%></td>
+		<td style="width:200px"><%=task.owner_string%></td>
 
 		<td>
 			<button class="btn btn-info archive" data-id="<%=task.id%>"> Purchased </button>
@@ -19,7 +21,7 @@
 		<% end %>
 		<% end %>
 		<% end %>
-			</tr>
+	</tr>
 </table>
 
 <!-- 

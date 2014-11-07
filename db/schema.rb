@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141106044415) do
+ActiveRecord::Schema.define(version: 20141107001320) do
 
   create_table "tasks", force: true do |t|
     t.string   "title"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20141106044415) do
     t.integer  "archived"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "owner_string"
   end
 
 end
